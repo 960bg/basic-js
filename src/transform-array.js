@@ -44,6 +44,10 @@ function transform(arr) {
 
       case discard_prev:
         if (mas.length > 0) {
+          if ((index === i) && (dn == 1)) {
+            dn = 0;
+            break;
+          }
           index = i + 1;
           dp = 1;
           mas.pop();
@@ -67,7 +71,7 @@ function transform(arr) {
             dn = 0;
             break;
           }
-          mas.push(mas.length - 1);
+          mas.push(mas[mas.length - 1]);
 
         };
         break;
